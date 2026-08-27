@@ -6,20 +6,12 @@
 
 <title>Odenwaldwickinger | Hundewanderungen im Odenwald</title>
 
-https://fonts.googleapis.com
-https://fonts.gstatic.com
-
-https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Inter:wght@300;400;500;600&display=swap
-
-<style>
-
-:root{
-    --wald:#2F4F3E;
+<link rel="preconnect" href="https://fonts.connect" href="https://fonts.gstaticts.googleapis.com/css2?family=Merriweather:wght@700&family=Inter:wght@300;400;500;600;700&display=swap"
+        --wald:#2F4F3E;
     --moos:#58714F;
     --sand:#F5F1E8;
     --holz:#8A6238;
-    --weiß:#FFFFFF;
-    --text:#2b2b2b;
+    --text:#2C2C2C;
 }
 
 *{
@@ -34,12 +26,10 @@ html{
 
 body{
     font-family:'Inter',sans-serif;
-    color:var(--text);
     background:var(--sand);
+    color:var(--text);
     line-height:1.7;
 }
-
-/* Navigation */
 
 nav{
     position:fixed;
@@ -53,172 +43,126 @@ nav{
 .nav-container{
     max-width:1200px;
     margin:auto;
+    padding:18px 30px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 30px;
 }
 
 .logo{
     color:white;
+    text-decoration:none;
     font-weight:700;
     font-size:1.2rem;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
 }
 
 .nav-links a{
     color:white;
     text-decoration:none;
-    margin-left:20px;
-    font-size:.95rem;
 }
-
-/* Hero */
 
 .hero{
     min-height:100vh;
+
     background:
-        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url("https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=1600&q=80");
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.55)
+        ),
+        url("https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=1800&q=80");
+
     background-size:cover;
     background-position:center;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
     color:white;
-    padding:80px 20px;
 }
 
 .hero-content{
-    max-width:850px;
+    max-width:900px;
+    padding:30px;
+}
+
+.hero-logo{
+    width:180px;
+    margin:0 auto 30px;
+}
+
+.hero-logo img{
+    width:100%;
 }
 
 .hero h1{
-    font-family:'Merriweather',serif;
-    font-size:4rem;
+    font-family:"Merriweather",serif;
+    font-size:4.5rem;
     margin-bottom:20px;
 }
 
-.hero p{
-    font-size:1.35rem;
-    margin-bottom:35px;
+.tagline{
+    font-size:1.8rem;
+    margin-bottom:25px;
+    color:#f5f1e8;
 }
 
-.button{
+.hero-text{
+    max-width:700px;
+    margin:auto;
+    font-size:1.2rem;
+}
+
+.hero-buttons{
+    margin-top:40px;
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.btn{
     display:inline-block;
+    padding:15px 30px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.btn-primary{
     background:var(--holz);
     color:white;
-    text-decoration:none;
-    padding:15px 35px;
-    border-radius:40px;
-    font-weight:600;
-    transition:.3s;
 }
 
-.button:hover{
-    transform:translateY(-3px);
-}
-
-/* Sections */
-
-section{
-    padding:90px 20px;
+.btn-secondary{
+    border:2px solid white;
+    color:white;
 }
 
 .container{
     max-width:1100px;
     margin:auto;
+    padding:90px 20px;
 }
 
-h2{
-    font-family:'Merriweather',serif;
-    font-size:2.3rem;
-    color:var(--wald);
-    margin-bottom:25px;
-}
-
-.intro{
+.section-title{
     text-align:center;
-    max-width:800px;
+    margin-bottom:20px;
+    font-family:"Merriweather",serif;
+    color:var(--wald);
+}
+
+.section-text{
+    text-align:center;
+    max-width:900px;
     margin:auto;
 }
-
-/* Wanderung */
-
-.tour-card{
-    background:white;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    border-left:8px solid var(--wald);
-}
-
-.tour-details{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:25px;
-    margin-top:30px;
-}
-
-/* Vorteile */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.feature{
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
-
-.feature h3{
-    margin:15px 0;
-    color:var(--wald);
-}
-
-.icon{
-    font-size:3rem;
-}
-
-/* Galerie */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
-}
-
-.gallery img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:15px;
-}
-
-/* Kontakt */
-
-.contact{
-    background:var(--wald);
-    color:white;
-    text-align:center;
-    border-radius:25px;
-    padding:60px 30px;
-}
-
-.contact h2{
-    color:white;
-}
-
-.contact a{
-    color:white;
-}
-
-/* Footer */
 
 footer{
     background:#1d3024;
@@ -227,206 +171,106 @@ footer{
     padding:30px;
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
-.hero h1{
-    font-size:2.5rem;
-}
+    .hero h1{
+        font-size:2.6rem;
+    }
 
-.hero p{
-    font-size:1.1rem;
-}
+    .tagline{
+        font-size:1.2rem;
+    }
 
-.nav-links{
-    display:none;
-}
-
+    .nav-links{
+        display:none;
+    }
 }
 
 </style>
+
 </head>
 
 <body>
 
 <nav>
-    <div class="nav-container">
-        <div class="logo">🐾 Odenwaldwickinger</div>
 
-        <div class="nav-links">
-            #ueber-unsÜber uns</a>
-            #tourWanderung</a>
-            #kontaktKontakt</a>
+    <div class="nav-container">
+
+        <a href="#" class="logo">
+            ⛵🐾 Odenwaldwickinger
+iv class="nav-links">
+            <a href="#ueberuns</a>
+            <a href="#wanderung">Wanderung</a>
+ <a href="#galerie">Impression        <a href="#kontakta>
         </div>
+
     </div>
+
 </nav>
 
 <header class="hero">
+
     <div class="hero-content">
 
-        <h1>Odenwaldwickinger</h1>
+        <div class="hero-logo">
 
-        <p>
+            <!-- Hier später Dein SVG-Logo -->
+            <img src="logo.svg"
+                 alt="Odenwaldwickinger Logo">
+
+        </div>
+
+        <h1>Odenwaldwickinger</h1n Pfad.<br>
+            Abenteuer im Odenwald.
+        </div>
+
+        <p class="hero-text">
             Gemeinsam mit unseren Hunden entdecken wir die schönsten
-            Wege, Wälder und Aussichtspunkte des Odenwaldes.
+            Wanderwege, Aussichtspunkte und Naturerlebnisse des Odenwaldes.
+            Ohne Leistungsdruck, dafür mit viel Gemeinschaft,
+            Naturverbundenheit und Abenteuerlust.
         </p>
 
-        #tour
-            Nächste Wanderung ansehen
-        </a>
+        <div class="hero-buttons">
+
+            #wanderung
+               Nächste Wanderung
+            </a>
+
+            #kontakt
+               Mitwandern
+            </a>
+
+        </div>
 
     </div>
+
 </header>
 
 <section id="ueber-uns">
 
-    <div class="container intro">
+    <div class="container">
 
-        <h2>Gemeinsam unterwegs</h2>
+        <h2 class="section-title">
+            Mehr als nur eine Hundewanderung
+        </h2>
 
-        <p>
-            Die Odenwaldwickinger sind eine Gemeinschaft naturbegeisterter
-            Menschen und ihrer Hunde.
-            Bei unseren Wanderungen geht es nicht um Leistung oder Tempo,
-            sondern um Naturerlebnisse, neue Begegnungen und entspannte Zeit
-            mit unseren Vierbeinern.
+        <p class="section-text">
+            Die Odenwaldwickinger verbinden Menschen,
+            Hunde und Natur. Unsere Touren führen durch
+            stille Wälder, über aussichtsreiche Höhenzüge,
+            entlang kleiner Bäche und zu besonderen Orten
+            im Odenwald.
         </p>
-
-    </div>
-
-</section>
-
-<section id="tour">
-
-    <div class="container">
-
-        <h2>Nächste Wanderung</h2>
-
-        <div class="tour-card">
-
-            <h3>🌲 Felsenmeer-Runde im Odenwald</h3>
-
-            <div class="tour-details">
-
-                <div>
-                    <strong>📅 Datum</strong><br>
-                    Samstag, 12. September
-                </div>
-
-                <div>
-                    <strong>🕙 Start</strong><br>
-                    10:00 Uhr
-                </div>
-
-                <div>
-                    <strong>🥾 Strecke</strong><br>
-                    ca. 9 km
-                </div>
-
-                <div>
-                    <strong>📍 Treffpunkt</strong><br>
-                    Lautertal
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section>
-
-    <div class="container">
-
-        <div class="features">
-
-            <div class="feature">
-                <div class="icon">🌲</div>
-                <h3>Natur erleben</h3>
-                <p>
-                    Entdecke die schönsten Wege und Ausblicke
-                    des Odenwaldes.
-                </p>
-            </div>
-
-            <div class="feature">
-                <div class="icon">🐾</div>
-                <h3>Gemeinsam wandern</h3>
-                <p>
-                    Triff andere Hundefreunde und genieße
-                    entspannte Touren in guter Gesellschaft.
-                </p>
-            </div>
-
-            <div class="feature">
-                <div class="icon">📸</div>
-                <h3>Besondere Momente</h3>
-                <p>
-                    Schöne Erlebnisse für Mensch und Hund
-                    bleiben lange in Erinnerung.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section>
-
-    <div class="container">
-
-        <h2>Impressionen</h2>
-
-        <div class="gallery">
-
-            https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80
-
-            https://images.unsplash.com/photo-1516934024742-b461fba47600?auto=format&fit=crop&w=800&q=80
-
-            https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&w=800&q=80
-
-            https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=800&q=80
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="kontakt">
-
-    <div class="container">
-
-        <div class="contact">
-
-            <h2>Seid dabei!</h2>
-
-            <p>
-                Du möchtest mit deinem Hund an einer Wanderung teilnehmen?
-            </p>
-
-            <br>
-
-            <p>
-                📧 kontakt@odenwaldwickinger.de
-            </p>
-
-            <p>
-                📱 0151 123456789
-            </p>
-
-        </div>
 
     </div>
 
 </section>
 
 <footer>
-    © 2026 Odenwaldwickinger • Hundewanderungen im Odenwald
+    © 2026 Odenwaldwickinger
 </footer>
 
 </body>
 </html>
+``
