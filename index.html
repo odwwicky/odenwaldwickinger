@@ -1,53 +1,190 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Odenwaldwickinger</title>
- 
-  <style>
-    body{
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      background:#f5f5f5;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odenwaldwickinger – Hundewanderungen im Odenwald</title>
+
+<style>
+:root{
+    --green:#355e3b;
+    --light:#f7f4ef;
+    --accent:#c88b3a;
+    --dark:#2c2c2c;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    background:var(--light);
+    color:var(--dark);
+    line-height:1.6;
+}
+
+/* Hero */
+.hero{
+    height:70vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:3.5rem;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* Sections */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+h2{
+    color:var(--green);
+    margin-bottom:15px;
+}
+
+.highlight{
+    background:var(--green);
+    color:white;
+}
+
+/* Grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* Footer */
+footer{
+    background:var(--green);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    .hero-content h1{
+        font-size:2.3rem;
     }
- 
-    header{
-      text-align:center;
-    }
- 
-    .card{
-      background:white;
-      padding:20px;
-      margin-top:20px;
-      border-radius:10px;
-    }
-  </style>
+}
+</style>
 </head>
- 
+
 <body>
- 
-  <header>
-    <h1>🐾 Odenwaldwickinger</h1>
-    <p>Wir sind Fellnasen, die die Natur erkunden wollen. Unseren Zweibeinern wollen wir auch ein Naturerlebnis gönnen.</p>
-  </header>
- 
-  <div class="card">
-    <h2>Nächste Wanderung</h2>
-    <p>Samstag, 12. September um 10:00 Uhr</p>
-  </div>
- 
-  <div class="card">
-    <h2>Für wen?</h2>
-    <p>Alle freundlichen Hunde und ihre Menschen sind willkommen.</p>
-  </div>
- 
-  <div class="card">
-    <h2>Anmeldung</h2>
-    <p>E-Mail: deine-email@example.de</p>
-  </div>
- 
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>🐾 Odenwaldwickinger</h1>
+        <p>Gemeinsam mit unseren Hunden die schönsten Wege des Odenwaldes entdecken.</p>
+        <a href="#anmeldung" class="btn  </div>
+</section>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Wer wir sind</h2>
+        <p>
+            Die Odenwaldwickinger sind eine Gemeinschaft naturbegeisterter Hunde
+            und Menschen. Gemeinsam erkunden wir Waldwege, Burgruinen,
+            Aussichtspunkte und versteckte Pfade des Odenwaldes.
+        </p>
+    </div>
+
+    <div class="card highlight">
+        <h2>Nächste Wanderung</h2>
+        <p>
+            📅 Samstag, 12. September<br>
+            🕙 Start: 10:00 Uhr<br>
+            📍 Raum Beerfelden / Odenwald
+        </p>
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <h2>Für wen?</h2>
+            <p>
+                Für freundliche, sozialverträgliche Hunde und ihre Menschen.
+                Jeder ist willkommen – vom Wanderprofi bis zum Neuling.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Was erwartet euch?</h2>
+            <p>
+                Geführte Wanderungen, neue Kontakte,
+                spannende Strecken und jede Menge Spaß
+                für Zwei- und Vierbeiner.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Mitbringen</h2>
+            <p>
+                Wasser, Leine, gute Laune,
+                wetterfeste Kleidung und natürlich euren Hund.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card" id="anmeldung">
+        <h2>Anmeldung</h2>
+        <p>
+            📧 kontakt@odenwaldwickinger.de<br>
+            📱 WhatsApp: 0151 12345678
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Odenwaldwickinger • Hundewanderungen im Odenwald
+</footer>
+
 </body>
 </html>
