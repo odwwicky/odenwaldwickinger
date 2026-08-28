@@ -1,2 +1,2 @@
-# Odenwaldwickinger
+# Odenwaldwikinger
 Hundewanderungen im Odenwald
